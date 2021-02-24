@@ -1,0 +1,13 @@
+<a href="{%url 'about'%}">About this site</a>
+<h1>There are {{count}} words in your text</h1>
+<a href="{%url 'home'%}">Start another word count</a>
+<h2>Input text</h2>
+{{fulltext}}
+
+
+<h1>Word Count:</h1>
+
+  {%for word, counttotal in sortedwords %}
+  {{word}} - {{counttotal}}
+  <br>
+  {%endfor%}
